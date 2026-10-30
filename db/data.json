@@ -1,0 +1,32 @@
+    [
+        {
+            "nombre": "Nicolas",
+            "apellido": "Bernard",
+            "dni": "47689974",
+            "mail": "nnicobernard@gmail.com",
+            "cuota": 50000,
+            "vencimiento": "30/10/2026",
+            "cuotaPagada": false,
+            "historialPagos": []
+        },
+        {
+            "nombre": "Marcelo",
+            "apellido": "Gallardo",
+            "dni": "47912018",
+            "mail": "muñeco@gmail.com",
+            "cuota": 50000,
+            "vencimiento": "30/10/2026",
+            "cuotaPagada": false,
+            "historialPagos": []
+        },
+        {
+            "nombre": "Lionel",
+            "apellido": "Messi",
+            "dni": "47123456",
+            "mail": "leo@gmail.com",
+            "cuota": 50000,
+            "vencimiento": "30/10/2026",
+            "cuotaPagada": false,
+            "historialPagos": []
+        }
+    ]

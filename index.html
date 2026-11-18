@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de socios</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script defer src="js/storage.js"></script>
+    <script defer src="js/main.js"></script>
+
+</head>
+<body>
+    <header>
+        <img class="logo" src="assets/logo-gimnasio.png" alt="Logo del gimnasio">
+        <h1 class="titulo">Gestion de Socios</h1>
+
+        <nav class="menu">
+            <a href="#socios">Socios</a>
+            <a href="#pagos">Pagos</a>
+            <a href="#registro">Registro</a>
+            <a href="#informacion">Información</a>
+            <a href="#asociate">Asociate</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="banda banda-clara" id="asociate">
+            <div class="contenedor">
+                <div class="panel">
+                    <form id="formulario" novalidate>
+                        <h2 class="titulo-formulario">Asociate</h2>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" class="nombre" placeholder="Ingrese el nombre">
+                        <span class="error"></span>
+
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" class="apellido" placeholder="Ingrese el apellido">
+                        <span class="error"></span>
+
+                        <label for="dni">DNI</label>
+                        <input type="text" id="dni" class="dni" placeholder="Ingrese el DNI (8 números)">
+                        <span class="error"></span>
+
+                        <label for="mail">Mail</label>
+                        <input type="email" id="mail" class="mail" placeholder="Ingrese el mail">
+                        <span class="error"></span>
+
+                        <button type="button" class="btn-agregar">Agregar socio</button>
+                        <button type="button" class="btn-agregar btn-cancelar">Cancelar edición</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="banda banda-oscura" id="informacion">
+            <div class="contenedor">
+                <div class="panel info">
+                    <h2>Información</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <h3>Horarios</h3>
+                            <p>Lunes a viernes: 8:00 a 22:00</p>
+                            <p>Sábados: 9:00 a 18:00</p>
+                            <p>Domingos: cerrado</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Ubicación</h3>
+                            <p>Av. Nicolas Bernard 912</p>
+                            <p>Buenos Aires, Argentina</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Contacto</h3>
+                            <p>Tel: 11 1234-5678</p>
+                            <p>Mail: sociosgym@gimnasio.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="banda banda-clara" id="socios">
+            <div class="contenedor">
+                <div class="resumen" id="recaudado">
+                    <div class="dato">
+                        <span class="total-socios">0</span>
+                        <p>Socios</p>
+                    </div>
+                    <div class="dato">
+                        <span class="socios-activos">0</span>
+                        <p>Socios al día</p>
+                    </div>
+                    <div class="dato">
+                        <span class="total-deuda">0</span>
+                        <p>Cuotas adeudadas</p>
+                    </div>
+                    <div class="dato">
+                        <span class="total-recaudado">$0</span>
+                        <p>Recaudado</p>
+                    </div>
+                </div>
+
+                <input type="text" class="buscador" placeholder="Buscar por nombre, apellido o DNI...">
+
+                <div class="mensaje"></div>
+
+                <div class="lista-socios"></div>
+
+                <button type="button" class="btn-agregar btn-restablecer">Restablecer datos</button>
+            </div>
+        </section>
+
+
+        <section class="banda banda-oscura" id="pagos">
+            <div class="contenedor">
+                <div class="panel">
+                    <h2 class="titulo-panel">Pagos</h2>
+                    <label for="select-socio">Socio</label>
+                    <select id="select-socio" class="select-socio"></select>
+
+                    <div class="plan-pago"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="banda banda-clara" id="registro">
+            <div class="contenedor">
+                <div class="panel">
+                    <h2 class="titulo-panel">Registro de los últimos 12 meses</h2>
+
+                    <label for="filtro-registro">Mostrar</label>
+                    <select id="filtro-registro" class="filtro-registro">
+                        <option value="todos">Todos los socios</option>
+                        <option value="deuda">Socios con deuda</option>
+                        <option value="aldia">Socios al día</option>
+                    </select>
+
+                    <p class="leyenda">✔ Cuota pagada &nbsp; ✘ Cuota adeudada &nbsp; - Anterior al alta del socio</p>
+                    <div class="tabla-registro"></div>
+
+                    <h3 class="subtitulo">Pagos efectuados</h3>
+                    <div class="tabla-pagos"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- SWEETALERT -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

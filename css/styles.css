@@ -1,0 +1,705 @@
+:root {
+    --verde: #115544;
+    --verde-oscuro: #0b3a2e;
+    --verde-medio: #2e8b57;
+    --menta: #e1fce1;
+    --fondo: #f6f9f4;
+    --fondo-alt: #e3edf8;
+    --blanco: #fff;
+    --texto: #121c17;
+    --texto-suave: #3b4d44;
+    --borde: #b4c7ad;
+    --rojo: #b3261e;
+    --rojo-claro: #fdecea;
+    --azul: #1b4f8f;
+    --azul-oscuro: #123a6b;
+    --azul-claro: #e3edf9;
+    --azul-borde: #9bb8de;
+    --radio: 0.875rem;
+    --sombra: 0 0.25rem 1.25rem rgba(17, 85, 68, 0.08);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    font-size: 80%;
+}
+
+body {
+    font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    margin: 0;
+    line-height: 1.5;
+}
+
+:focus-visible {
+    outline: 3px solid var(--azul);
+    outline-offset: 2px;
+}
+
+/* ---------- Header ---------- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem 1.25rem;
+    padding: 0.875rem 2.3rem;
+    background: var(--verde);
+    color: white;
+    margin-bottom: 0;
+    box-shadow: 0 0.125rem 0.75rem rgba(0, 0, 0, 0.18);
+}
+
+.logo {
+    width: 3.75rem;
+    height: 3.75rem;
+}
+
+.titulo {
+    display: flex;
+    margin: 0;
+    padding: 0.25rem 0;
+    font-size: clamp(1.375rem, 3vw, 2rem);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: var(--menta);
+}
+
+.menu {
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.5rem;
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    font-weight: 600;
+}
+
+.menu a {
+    text-align: center;
+    text-decoration: none;
+    color: var(--menta);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.menu a:hover {
+    background-color: rgba(225, 252, 225, 0.16);
+    color: #fff;
+}
+/* ---------- Fondo ---------- */
+.banda {
+    padding: 3rem 0;
+}
+
+.banda-clara {
+    background: var(--fondo);
+}
+
+.banda-oscura {
+    background: var(--fondo-alt);
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.panel {
+    width: 100%;
+    background: var(--blanco);
+    padding: 2.5rem 1.25rem;
+    border-radius: var(--radio);
+    border: 1px solid var(--borde);
+    box-shadow: var(--sombra);
+}
+
+/* ---------- Formulario ---------- */
+#formulario {
+    width: 100%;
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+}
+
+#formulario h2 {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 1.5rem;
+    font-size: clamp(1.875rem, 4vw, 2.5rem);
+    font-weight: 800;
+    color: var(--verde);
+}
+
+label {
+    display: block;
+    margin-top: 1.25rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--texto);
+}
+
+input,
+select {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    margin-top: 0.4rem;
+    font-family: inherit;
+    font-size: 1.0625rem;
+    color: var(--texto);
+    background: #fbfdf9;
+    border: 1.5px solid var(--borde);
+    border-radius: 0.625rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder {
+    color: #66786f;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--azul);
+    box-shadow: 0 0 0 4px rgba(27, 79, 143, 0.2);
+}
+
+.btn-agregar {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 0.95rem;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background: var(--verde);
+    color: #fff;
+    border: none;
+    border-radius: 0.625rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-agregar:hover {
+    background: var(--verde-oscuro);
+}
+
+.btn-agregar:active {
+    transform: translateY(1px);
+}
+
+/* ---------- Información ---------- */
+.info h2,
+.titulo-panel {
+    color: var(--azul-oscuro);
+    margin: 0 0 1.5rem;
+    padding: 0;
+    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+    font-weight: 800;
+    text-align: center;
+    color: var(--verde);
+}
+
+.info-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    padding: 0 1.5rem 0.5rem;
+}
+
+.info-item {
+    flex: 1 1 13.75rem;
+    background: var(--fondo);
+    padding: 1.25rem 1.5rem;
+    border-radius: 0.75rem;
+    border-left: 4px solid var(--azul);
+}
+
+.info-item h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.3rem;
+    color: var(--azul-oscuro);
+}
+
+.info-item p {
+    margin: 0.4rem 0;
+    font-size: 1.1rem;
+    color: var(--texto-suave);
+}
+
+/* ---------- Resumen ---------- */
+.resumen {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.dato {
+    flex: 1 1 12.5rem;
+    padding: 1.25rem 1rem;
+    text-align: center;
+    background: var(--verde);
+    color: white;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.dato span {
+    display: block;
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--menta);
+}
+
+.dato p {
+    margin: 0.25rem 0 0;
+    font-size: 1.1rem;
+    opacity: 1;
+}
+
+.buscador {
+    width: 100%;
+    margin: 0;
+    padding: 1rem 1.1rem;
+    font-size: 1.1rem;
+    background: var(--blanco);
+}
+
+.mensaje {
+    display: none;
+    text-align: center;
+    color: var(--texto-suave);
+    font-weight: 600;
+}
+
+/* ---------- Lista de socios ---------- */
+.lista-socios {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+    gap: 1rem;
+}
+
+.socio {
+    background-color: var(--blanco);
+    padding: 1.25rem;
+    font-size: 1.1rem;
+    margin-top: 0;
+    border: 1px solid var(--borde);
+    border-top: 4px solid var(--verde-medio);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    overflow-wrap: anywhere;
+}
+
+.socio h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.35rem;
+    color: var(--verde);
+}
+
+.socio p {
+    margin: 0.25rem 0;
+    color: var(--texto-suave);
+}
+
+.socio button {
+    margin: 0.75rem 0.625rem 0 0;
+    font-family: inherit;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.socio button[class^="pagar"] {
+    background: var(--verde);
+    color: white;
+    border: 2px solid var(--verde);
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+}
+
+.socio button[class^="pagar"]:hover {
+    background: var(--verde-oscuro);
+    border-color: var(--verde-oscuro);
+}
+
+.socio button[class^="eliminar"] {
+    background: white;
+    color: var(--rojo);
+    border: 2px solid var(--rojo);
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+}
+
+.socio button[class^="eliminar"]:hover {
+    background: var(--rojo);
+    color: white;
+}
+
+
+.btn-restablecer {
+    align-self: center;
+    width: auto;
+    margin-top: 1rem;
+    padding: 0.7rem 1.75rem;
+    font-size: 1.05rem;
+    background: transparent;
+    color: var(--verde);
+    border: 2px solid var(--verde);
+}
+
+.btn-restablecer:hover {
+    background: var(--verde);
+    color: #fff;
+}
+
+/* ---------- Errores del formulario ---------- */
+.error {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--rojo);
+}
+
+input.invalido {
+    border-color: var(--rojo);
+    background: var(--rojo-claro);
+}
+
+input.invalido:focus {
+    border-color: var(--rojo);
+    box-shadow: 0 0 0 4px rgba(179, 38, 30, 0.2);
+}
+
+.btn-cancelar {
+    display: none;
+    margin-top: 0.75rem;
+    background: transparent;
+    color: var(--verde);
+    border: 2px solid var(--verde);
+}
+
+.btn-cancelar:hover {
+    background: var(--verde);
+    color: #fff;
+}
+
+.editando .btn-cancelar {
+    display: block;
+}
+
+.socio button[class^="editar"] {
+    background: white;
+    color: var(--verde);
+    border: 2px solid var(--verde);
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+}
+
+.socio button[class^="editar"]:hover {
+    background: var(--verde);
+    color: white;
+}
+
+/* ---------- Pagos ---------- */
+.subtitulo {
+    margin: 2rem 0 0.75rem;
+    font-size: 1.35rem;
+    color: var(--azul-oscuro);
+}
+
+.vacio,
+.leyenda {
+    margin: 0.75rem 0;
+    color: var(--texto-suave);
+    font-weight: 600;
+}
+
+.plan-resumen {
+    margin-top: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--azul-claro);
+    border-left: 4px solid var(--azul);
+    border-radius: 0.75rem;
+}
+
+.plan-resumen h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.4rem;
+    color: var(--azul-oscuro);
+}
+
+.plan-resumen p {
+    margin: 0.25rem 0;
+    font-size: 1.1rem;
+    color: var(--texto-suave);
+}
+
+.atajos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.atajo {
+    padding: 0.55rem 1.1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--azul);
+    background: white;
+    border: 2px solid var(--azul);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.atajo:hover {
+    background: var(--azul);
+    color: white;
+}
+
+.plan-periodos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.periodo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0;
+    padding: 0.6rem 0.75rem;
+    font-size: 1rem;
+    background: white;
+    border: 2px solid var(--borde);
+    border-radius: 0.625rem;
+    cursor: pointer;
+}
+
+.periodo input {
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.periodo span {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+}
+
+.periodo small {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.periodo.pagada {
+    background: var(--menta);
+    border-color: var(--verde-medio);
+    color: var(--verde-oscuro);
+    cursor: default;
+}
+
+.periodo.adeudada {
+    background: var(--rojo-claro);
+    border-color: var(--rojo);
+    color: #8f1d17;
+}
+
+.periodo.adelanto {
+    background: var(--azul-claro);
+    border-color: var(--azul-borde);
+    color: var(--azul-oscuro);
+}
+
+.periodo:has(input:checked:not(:disabled)) {
+    box-shadow: 0 0 0 3px rgba(27, 79, 143, 0.45);
+    border-color: var(--azul);
+}
+
+.plan-total {
+    margin: 1.25rem 0 0;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--azul-oscuro);
+}
+
+.plan-pago .btn-agregar {
+    margin-top: 1rem;
+}
+
+/* ---------- Tablas ---------- */
+.tabla-scroll {
+    overflow-x: auto;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+th,
+td {
+    padding: 0.65rem 0.8rem;
+    text-align: center;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--borde);
+}
+
+thead th {
+    background: var(--azul);
+    color: #fff;
+}
+
+tbody th {
+    text-align: left;
+    color: var(--azul-oscuro);
+}
+
+.celda-cuotas {
+    white-space: normal;
+    min-width: 12rem;
+}
+
+.celda-pagada {
+    color: #1e6b3f;
+    font-weight: 800;
+}
+
+.celda-adeudada {
+    color: var(--rojo);
+    font-weight: 800;
+    background: var(--rojo-claro);
+}
+
+.celda-sin-alta {
+    color: var(--texto-suave);
+}
+
+#registro label,
+#pagos label {
+    margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+    .atajo {
+        flex: 1 1 100%;
+    }
+
+    .plan-resumen {
+        padding: 1rem;
+    }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+    header {
+        padding: 0.75rem 1.25rem;
+    }
+
+    .banda {
+        padding: 2rem 0;
+    }
+
+    .info-grid {
+        padding: 0 0.5rem 0.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: static;
+    }
+
+    .menu {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .banda {
+        padding: 1.25rem 0;
+    }
+
+    .contenedor {
+        padding: 0.625rem;
+        gap: 1rem;
+    }
+
+    .panel {
+        padding: 1.25rem 0.625rem;
+    }
+
+    #formulario {
+        padding: 0.5rem;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    .btn-agregar {
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+    }
+
+    .info-grid {
+        padding: 0 0.25rem 0.25rem;
+    }
+
+    .dato span {
+        font-size: 2rem;
+    }
+
+    .lista-socios {
+        grid-template-columns: 1fr;
+    }
+
+    .socio {
+        font-size: 1rem;
+    }
+
+    .socio button {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .btn-restablecer {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        transition: none !important;
+    }
+}

@@ -1,0 +1,133 @@
+[
+  {
+    "nombre": "Nicolas",
+    "apellido": "Bernard",
+    "dni": "47689974",
+    "mail": "nnicobernard@gmail.com",
+    "cuota": 50000,
+    "alta": "2026-01",
+    "periodosPagados": [
+      "2026-01",
+      "2026-02",
+      "2026-03",
+      "2026-04",
+      "2026-05",
+      "2026-06",
+      "2026-07",
+      "2026-08",
+      "2026-09"
+    ],
+    "historialPagos": [
+      {
+        "fecha": "05/01/2026",
+        "periodos": [
+          "2026-01"
+        ],
+        "monto": 50000,
+        "formaPago": "tarjeta"
+      },
+      {
+        "fecha": "03/02/2026",
+        "periodos": [
+          "2026-02",
+          "2026-03"
+        ],
+        "monto": 90000,
+        "formaPago": "efectivo"
+      },
+      {
+        "fecha": "02/05/2026",
+        "periodos": [
+          "2026-04",
+          "2026-05",
+          "2026-06"
+        ],
+        "monto": 150000,
+        "formaPago": "tarjeta"
+      },
+      {
+        "fecha": "01/08/2026",
+        "periodos": [
+          "2026-07",
+          "2026-08",
+          "2026-09"
+        ],
+        "monto": 135000,
+        "formaPago": "efectivo"
+      }
+    ]
+  },
+  {
+    "nombre": "Marcelo",
+    "apellido": "Gallardo",
+    "dni": "47912018",
+    "mail": "marcelogallardo@gmail.com",
+    "cuota": 50000,
+    "alta": "2026-01",
+    "periodosPagados": [
+      "2026-01",
+      "2026-02",
+      "2026-03",
+      "2026-04",
+      "2026-05",
+      "2026-06",
+      "2026-07",
+      "2026-08",
+      "2026-09",
+      "2026-10",
+      "2026-11",
+      "2026-12"
+    ],
+    "historialPagos": [
+      {
+        "fecha": "10/01/2026",
+        "periodos": [
+          "2026-01",
+          "2026-02",
+          "2026-03",
+          "2026-04",
+          "2026-05",
+          "2026-06"
+        ],
+        "monto": 270000,
+        "formaPago": "efectivo"
+      },
+      {
+        "fecha": "05/07/2026",
+        "periodos": [
+          "2026-07",
+          "2026-08",
+          "2026-09",
+          "2026-10",
+          "2026-11",
+          "2026-12"
+        ],
+        "monto": 300000,
+        "formaPago": "tarjeta"
+      }
+    ]
+  },
+  {
+    "nombre": "Lionel",
+    "apellido": "Messi",
+    "dni": "47123456",
+    "mail": "leomessi@gmail.com",
+    "cuota": 50000,
+    "alta": "2026-06",
+    "periodosPagados": [
+      "2026-06",
+      "2026-07"
+    ],
+    "historialPagos": [
+      {
+        "fecha": "08/06/2026",
+        "periodos": [
+          "2026-06",
+          "2026-07"
+        ],
+        "monto": 90000,
+        "formaPago": "efectivo"
+      }
+    ]
+  }
+]
